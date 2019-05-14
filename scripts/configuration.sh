@@ -2,8 +2,12 @@
 set -e
 
 echo "  ----- install ruby and bundler -----  "
+apt-get update 
+apt-get dist-upgrade -y
 apt-get update
-apt-get install -y ruby-full build-essential
+apt-get install -y build-essential
+apt-get install -y ruby-full
+#apt install -y ruby-full build-essential 
 gem install --no-rdoc --no-ri bundler
 
 echo "  ----- install mongodb -----  "
